@@ -15,6 +15,7 @@ class OrderService(
     fun createOrder(req: OrderRequest): UUID {
         val order = Order(
             terminal = req.terminal,
+            paymentType = req.paymentType,
             items = req.items.map { OrderItem(it.quantity, it.unitPrice) }
         )
         

@@ -6,6 +6,7 @@ import java.util.UUID
 
 data class Order(
     val id: UUID = UUID.randomUUID(),
+    val paymentType: String,
     val terminal: String,
     val items: List<OrderItem>,
     val createdAt: OffsetDateTime = OffsetDateTime.now()
