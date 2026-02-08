@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+# Override via env vars nos containers
+mqtt:
+  brokerUrl: ${MQTT_BROKER_URL:tcp://localhost:1883}
+  clientId: ${MQTT_CLIENT_ID:api-orders}
+  username: ${MQTT_USERNAME:}
+  password: ${MQTT_PASSWORD:}
