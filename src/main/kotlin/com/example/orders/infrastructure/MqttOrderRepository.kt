@@ -13,6 +13,6 @@ class MqttOrderRepository(
 
     override fun save(order: Order) {
         val json = objectMapper.writeValueAsString(order)
-        publisher.publish("orders/new/$order.terminal", json, qos = 1)
+        publisher.publish("orders/new/${order.terminal}", json, qos = 1)
     }
 }
